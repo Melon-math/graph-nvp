@@ -201,6 +201,7 @@ class AdditiveNodeFeatureCoupling(Coupling):
         self.out_size = num_features * num_masked_cols
 
         with self.init_scope():
+            # Main Step
             self.rgcn = RelGCN(out_channels=ch_list['hidden'][0], num_edge_type=num_relations,
                                ch_list=ch_list['gcn'],
                                input_type=input_type, activation=F.relu)
