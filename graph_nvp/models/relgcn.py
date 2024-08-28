@@ -98,6 +98,7 @@ class RelGCNReadout(chainer.Chain):
         return F.tanh(F.sum(sig_feat * tanh_feat, axis=1))
 
 
+# Main Steps
 class RelGCN(chainer.Chain):
 
     def __init__(self, out_channels=64, num_edge_type=4, ch_list=None,
